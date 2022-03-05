@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.switch {
+  /* border: 1px solid red; */
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background: var(--switch);
+  max-width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: var(--switchSnipper);
+  border-radius: 50%;
+  transform: translateX(40px);
+  transition: .3s;
+  will-change: transform;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .switch:before {
+  transform: translateX(0);
+}
+
+.dark {
+  --switchSnipper: linear-gradient(183.67deg, #AFCAFF 6.6%, white 96.98%);
+  --switch: linear-gradient(183.67deg, #2B4485 6.6%, #AFCAFF 96.98%);
+}
+
+.light {
+  --switch: linear-gradient(180deg, #66FFED 0%, #FFEEB2 100%);
+  --switchSnipper: linear-gradient(180deg, #FFC123 0%, #F8832E 100%);
+}

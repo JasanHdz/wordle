@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import Switch from './components/common/switch'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
+    <div className="min-h-screen bg-white dark:prose-dark dark:bg-black">
       <h1 className='text-3xl font-bold underline'>Hello World</h1>
+      <Switch />
     </div>
   )
 }
