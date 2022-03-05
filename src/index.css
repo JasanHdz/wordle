@@ -4,11 +4,11 @@
 
 .switch {
   /* border: 1px solid red; */
-  height: 40px;
+  height: 30px;
   display: block;
   border-radius: 20px;
   background: var(--switch);
-  max-width: 80px;
+  width: 60px;
   padding: 5px;
   box-sizing: border-box;
   cursor: pointer;
@@ -18,11 +18,11 @@
 .switch::before {
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-image: var(--switchSnipper);
   border-radius: 50%;
-  transform: translateX(40px);
+  transform: translateX(30px);
   transition: .3s;
   will-change: transform;
 }
@@ -43,4 +43,8 @@
 .light {
   --switch: linear-gradient(180deg, #66FFED 0%, #FFEEB2 100%);
   --switchSnipper: linear-gradient(180deg, #FFC123 0%, #F8832E 100%);
+}
+
+main {
+  margin: 0 auto;
 }
